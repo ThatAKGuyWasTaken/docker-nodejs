@@ -10,13 +10,21 @@ RUN apt-get update
 
 # install nodejs and npm
 
-RUN apt-get install -y nodejs npm git git-core
+#RUN apt-get install -y nodejs npm git git-core
+RUN apt-get install -y nodejs npm nodejs-legacy git git-core
+
+#
+# update the image before installing software
+# RUN sudo apt-get update
+# Install Node.js and npm
+#RUN sudo apt-get install -y nodejs npm nodejs-legacy
+#
 
 
-ADD start.sh /tmp
+ADD start.sh /tmp/
 
 RUN chmod +x /tmp/start.sh
 
-CMD /tmp/start.sh
+CMD ./tmp/start.sh
 
 
