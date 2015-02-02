@@ -6,4 +6,5 @@ app.get('/', function(req, res){
     res.send('Hello from inside a container!');
 });
 
-app.listen(8080);
+console.log("hey");
+app.listen(3050);

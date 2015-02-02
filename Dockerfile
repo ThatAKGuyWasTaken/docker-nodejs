@@ -25,6 +25,8 @@ ADD start.sh /tmp/
 
 RUN chmod +x /tmp/start.sh
 
+EXPOSE 3050
+
 CMD ./tmp/start.sh
 
 
